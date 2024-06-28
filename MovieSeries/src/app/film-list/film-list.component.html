@@ -1,0 +1,16 @@
+<div *ngIf="movies.length > 0">
+    <h2>Liste des Films</h2>
+    <ul>
+      <li *ngFor="let movie of movies">
+        <h3>{{ movie.titre }}</h3>
+        <p>Date de sortie: {{ movie.dateSortie }}</p>
+        <p>Genre: {{ movie.genre }}</p>
+        <p>Réalisateur: {{ movie.realisateur }}</p>
+        <p>Note: {{ movie.note }}</p>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="movies.length === 0">
+    <p>Aucun film trouvé.</p>
+  </div>
+  
